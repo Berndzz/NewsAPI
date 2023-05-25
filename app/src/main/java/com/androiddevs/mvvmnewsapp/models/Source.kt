@@ -1,6 +1,8 @@
 package com.androiddevs.mvvmnewsapp.models
 
+import java.io.Serializable
+
 data class Source(
-    val id: String,
-    val name: String
-)
+    val id: String?,
+    val name: String?
+): Serializable

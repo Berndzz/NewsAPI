@@ -86,10 +86,10 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
             .into(binding.ivArticleImage)
 
         binding.apply {
-            tvSource.text = article.source?.name ?: ""
+            tvSource.text = article.source.name ?: ""
             tvTitle.text = article.title
-            tvDescription.text = article.description ?: ""
-            tvPublishedAt.text = article.publishedAt ?: ""
+            tvDescription.text = article.description
+            tvPublishedAt.text = article.publishedAt
 
             root.setOnClickListener {
                 onItemClickListener?.let { listener ->

@@ -17,9 +17,9 @@ import com.androiddevs.mvvmnewsapp.util.Resource
 class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
 
     private lateinit var binding: FragmentBreakingNewsBinding
-    lateinit var viewModel: NewsViewModel
-    lateinit var newsAdapter: NewsAdapter
-    val TAG = "BreakingNewsFragment"
+    private lateinit var viewModel: NewsViewModel
+    private lateinit var newsAdapter: NewsAdapter
+    private val TAG = "BreakingNewsFragment"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentBreakingNewsBinding.bind(view)

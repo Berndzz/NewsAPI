@@ -23,7 +23,7 @@ class NewsActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarApp)
 
         val newsRepository = NewsRepository(ArticleDatabase(this))
-        val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
+        val viewModelProviderFactory = NewsViewModelProviderFactory(application, newsRepository)
         viewModel = ViewModelProvider(this, viewModelProviderFactory)[NewsViewModel::class.java]
 
         val navHostFragment =
